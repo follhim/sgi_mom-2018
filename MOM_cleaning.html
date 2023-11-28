@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Mom Manuscript</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="MOM_cleaning_files/libs/clipboard/clipboard.min.js"></script>
+<script src="MOM_cleaning_files/libs/quarto-html/quarto.js"></script>
+<script src="MOM_cleaning_files/libs/quarto-html/popper.min.js"></script>
+<script src="MOM_cleaning_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="MOM_cleaning_files/libs/quarto-html/anchor.min.js"></script>
+<link href="MOM_cleaning_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="MOM_cleaning_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="MOM_cleaning_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="MOM_cleaning_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="MOM_cleaning_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#create-rpid" id="toc-create-rpid" class="nav-link active" data-scroll-target="#create-rpid">Create RpID</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">Data Preparation</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a>
+  <ul>
+  <li><a href="#recode-for-dichotomous-items" id="toc-recode-for-dichotomous-items" class="nav-link" data-scroll-target="#recode-for-dichotomous-items">Recode for Dichotomous Items</a></li>
+  <li><a href="#create-demographic-table" id="toc-create-demographic-table" class="nav-link" data-scroll-target="#create-demographic-table">Create demographic table</a></li>
+  </ul></li>
+  <li><a href="#psychometrics" id="toc-psychometrics" class="nav-link" data-scroll-target="#psychometrics">Psychometrics</a>
+  <ul>
+  <li><a href="#sexual-attraction" id="toc-sexual-attraction" class="nav-link" data-scroll-target="#sexual-attraction">Sexual Attraction</a></li>
+  <li><a href="#ccaps-34" id="toc-ccaps-34" class="nav-link" data-scroll-target="#ccaps-34">CCAPS-34</a></li>
+  <li><a href="#durel" id="toc-durel" class="nav-link" data-scroll-target="#durel">DUREL</a></li>
+  <li><a href="#attitudes-and-beliefs" id="toc-attitudes-and-beliefs" class="nav-link" data-scroll-target="#attitudes-and-beliefs">Attitudes and Beliefs</a></li>
+  <li><a href="#relational-quality" id="toc-relational-quality" class="nav-link" data-scroll-target="#relational-quality">Relational Quality</a></li>
+  <li><a href="#psychological-well-being" id="toc-psychological-well-being" class="nav-link" data-scroll-target="#psychological-well-being">Psychological Well-being</a></li>
+  <li><a href="#depression-anxiety-stress-scale" id="toc-depression-anxiety-stress-scale" class="nav-link" data-scroll-target="#depression-anxiety-stress-scale">Depression, Anxiety, Stress Scale</a></li>
+  <li><a href="#social-support" id="toc-social-support" class="nav-link" data-scroll-target="#social-support">Social Support</a>
+  <ul>
+  <li><a href="#remove-participants" id="toc-remove-participants" class="nav-link" data-scroll-target="#remove-participants">Remove Participants</a></li>
+  </ul></li>
+  <li><a href="#median-imputation-of-missing-responses" id="toc-median-imputation-of-missing-responses" class="nav-link" data-scroll-target="#median-imputation-of-missing-responses">Median Imputation of Missing Responses</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mom Manuscript</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dataset</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"~/https:/follhim.github.io/sgi_mom-2018"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>org_data <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="st">"Mixed Orientation Marriages 2018 copy.sav"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>To add variable descriptions, look <a href="https://search.r-project.org/CRAN/refmans/misty/html/write.sav.html">here</a>.</p>
+<section id="create-rpid" class="level2">
+<h2 class="anchored" data-anchor-id="create-rpid">Create RpID</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new RID assignment</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>org_data<span class="sc">$</span>RpID <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(org_data))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Move the RID variable to the front</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>org_data <span class="ot">&lt;-</span> org_data[<span class="fu">c</span>(<span class="st">"RpID"</span>, <span class="fu">setdiff</span>(<span class="fu">names</span>(org_data), <span class="st">"RpID"</span>))]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove ResponseID</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>org_data <span class="ot">&lt;-</span> org_data[, <span class="sc">!</span><span class="fu">names</span>(org_data) <span class="sc">%in%</span> <span class="st">"RespondentID"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> org_data</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode any responses and redact them.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming your dataframe is named data</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data[, <span class="dv">182</span><span class="sc">:</span><span class="dv">201</span>] <span class="ot">&lt;-</span> <span class="fu">apply</span>(data[, <span class="dv">182</span><span class="sc">:</span><span class="dv">201</span>], <span class="dv">2</span>, <span class="cf">function</span>(x) <span class="fu">ifelse</span>(x <span class="sc">!=</span> <span class="st">""</span>, <span class="cn">NA</span>, x))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove extraneous variables</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data[, <span class="sc">-</span>(<span class="dv">202</span><span class="sc">:</span><span class="dv">222</span>)]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the character strings to POSIXct (datetime) objects</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Start_Time <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(data<span class="sc">$</span>StartDate, <span class="at">format =</span> <span class="st">"%m/%d/%Y %I:%M:%S %p"</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>End_Time <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(data<span class="sc">$</span>EndDate, <span class="at">format =</span> <span class="st">"%m/%d/%Y %I:%M:%S %p"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can perform operations on these datetime variables or create a new one based on them</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Duration <span class="ot">&lt;-</span> data<span class="sc">$</span>End_Time <span class="sc">-</span> data<span class="sc">$</span>Start_Time</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming Variables</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">rename</span>(data, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Demographic Variables</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">age =</span> q0001,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">gender =</span> q0002,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">race =</span> q0003,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">race_other =</span> q0003_other,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">marriage_status =</span> q0004,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">marriage_rate =</span> q0005,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">marriage_year =</span> q0006,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">education =</span> q0007,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">employment =</span> q0008,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">income =</span> q0009,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>               <span class="at">religion =</span> q0010,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">rel_other =</span> q0010_other,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">sex_att =</span> q0011,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>               <span class="at">spouse_sex_att =</span> q0012,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Sexual Behavior</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_1 =</span> q0013_0001,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_2 =</span> q0013_0002,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_3 =</span> q0013_0003,</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_4 =</span> q0013_0004,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_5 =</span> q0013_0005,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_6 =</span> q0013_0006,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_7 =</span> q0013_0007,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_8 =</span> q0013_0008,</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_9 =</span> q0013_0009,</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_10 =</span> q0013_0010,</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_11 =</span> q0013_0011,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>               <span class="at">sexbeh_12 =</span> q0013_0012,</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>               <span class="at">add_note =</span> q0014,</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Attitudes and Beliefs</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_b1 =</span> q0015,</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_c1 =</span> q0016,</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_b2 =</span> q0017,</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_b3 =</span> q0018,</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_b4 =</span> q0019,</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_c2 =</span> q0020,</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_c3 =</span> q0021,</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_c4 =</span> q0022,</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_b5 =</span> q0023,</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_1 =</span> q0024,</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>               <span class="at">att_2 =</span> q0025,</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>                <span class="co"># Gyno</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g1 =</span> q0026_0001, </span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g2 =</span> q0027_0001, </span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g3 =</span> q0028_0001, </span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g4 =</span> q0029_0001, </span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g5 =</span> q0030_0001, </span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g6 =</span> q0031_0001, </span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g7 =</span> q0032_0001, </span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_g8 =</span> q0033_0001, </span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Andro</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a1 =</span> q0034_0001, </span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a2 =</span> q0035_0001, </span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a3 =</span> q0036_0001, </span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a4 =</span> q0037_0001, </span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a5 =</span> q0038_0001, </span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a6 =</span> q0039_0001, </span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a7 =</span> q0040_0001, </span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>               <span class="at">eros_a8 =</span> q0041_0001,</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Depression</span></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_d1 =</span> q0122_0001, </span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_d2 =</span> q0124_0001, </span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_d3 =</span> q0129_0001, </span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_d4 =</span> q0132_0001, </span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_d5 =</span> q0135_0001, </span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_d6 =</span> q0136_0001, </span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_d7 =</span> q0140_0001,</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Anxiety</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_a1 =</span> q0121_0001,</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_a2 =</span> q0123_0001, </span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_a3 =</span> q0126_0001, </span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_a4 =</span> q0128_0001, </span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_a5 =</span> q0134_0001, </span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_a6 =</span> q0138_0001, </span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_a7 =</span> q0139_0001, </span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Stress</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_s1 =</span> q0120_0001, </span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_s2 =</span> q0125_0001, </span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_s3 =</span> q0127_0001, </span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_s4 =</span> q0130_0001, </span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_s5 =</span> q0131_0001, </span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_s6 =</span> q0133_0001, </span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>               <span class="at">dass_s7 =</span> q0137_0001,</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Growth</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g1 =</span> q0084_0001, </span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g2 =</span> q0085_0001, </span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g3 =</span> q0086_0001, </span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g4 =</span> q0087_0001, </span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g5 =</span> q0088_0001, </span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g6 =</span> q0089_0001, </span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g7 =</span> q0090_0001, </span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g8 =</span> q0091_0001, </span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_g9 =</span> q0092_0001,</span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Purpose in Life</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p1 =</span> q0093_0001, </span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p2 =</span> q0094_0001, </span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p3 =</span> q0095_0001, </span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p4 =</span> q0096_0001, </span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p5 =</span> q0097_0001, </span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p6 =</span> q0098_0001, </span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p7 =</span> q0099_0001, </span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p8 =</span> q0100_0001, </span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_p9 =</span> q0101_0001, </span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Self Acceptance</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a1 =</span> q0102_0001, </span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a2 =</span> q0103_0001, </span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a3 =</span> q0104_0001, </span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a4 =</span> q0105_0001, </span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a5 =</span> q0106_0001, </span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a6 =</span> q0107_0001, </span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a7 =</span> q0108_0001, </span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a8 =</span> q0109_0001, </span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwb_a9 =</span> q0110_0001,</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>               <span class="co"># DUREL</span></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>               <span class="at">religiosity =</span> q0141_0001, </span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>               <span class="at">spirituality =</span> q0142_0001, </span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>               <span class="co"># DUREL</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_ora1 =</span> q0143_0001, </span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_nora1 =</span> q0144_0001, </span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_nora2 =</span> q0145_0001, </span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_nora3 =</span> q0146_0001, </span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_ir1=</span> q0147_0001, </span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_ir2 =</span> q0148_0001, </span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_ir3 =</span> q0149_0001, </span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>               <span class="at">durel_ir4 =</span> q0150_0001,</span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Personal Wellbeing Index</span></span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_1 =</span> q0111_0001,</span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_2 =</span> q0112_0001,</span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_3 =</span> q0113_0001,</span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_4 =</span> q0114_0001,</span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_5 =</span> q0115_0001,</span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_6 =</span> q0116_0001,</span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_7 =</span> q0117_0001,</span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_8 =</span> q0118_0001,</span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>               <span class="at">pwi_v =</span> q0119_0001,</span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Attachment-Related Avoidance Subscale</span></span>
+<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_avd1 =</span> q0151_0001, </span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_avd2 =</span> q0152_0001, </span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_avd3 =</span> q0153_0001, </span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_avd4 =</span> q0154_0001, </span>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_avd5 =</span> q0155_0001, </span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_avd6 =</span> q0156_0001, </span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Attachment-Related Anxiety</span></span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_anx1 =</span> q0157_0001, </span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_anx2 =</span> q0158_0001, </span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a>               <span class="at">ecr_anx3 =</span> q0159_0001,</span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>               <span class="co"># General Social Support</span></span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_g1 =</span> q0042,</span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_g2 =</span> q0043,</span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_g3 =</span> q0044,</span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_g4 =</span> q0045,</span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>               <span class="co"># Same-sex Social Suppport</span></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_s1 =</span> q0046,</span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_s2 =</span> q0047,</span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_s3 =</span> q0048,</span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a>               <span class="at">support_s4 =</span> q0049,</span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a>               <span class="co"># ccaps - Social Anxiety</span></span>
+<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_sa1 =</span> q0050_0001, <span class="co"># SA-1</span></span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ga1 =</span> q0051_0001, <span class="co"># GA-1</span></span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ec1 =</span> q0052_0001, <span class="co"># EC-1</span></span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_de1 =</span> q0053_0001, <span class="co"># Dep-1</span></span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_de2 =</span> q0054_0001, <span class="co"># Dep-2</span></span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ec2 =</span> q0055_0001, <span class="co"># EC-2</span></span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ga2 =</span> q0056_0001, <span class="co"># GA-2</span></span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ad1 =</span> q0057_0001, <span class="co"># Ac-Dis-1</span></span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ga3 =</span> q0058_0001, <span class="co"># GA-3</span></span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ga4 =</span> q0059_0001, <span class="co"># GA-4</span></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_de3 =</span> q0060_0001, <span class="co"># Dep-3</span></span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_de4 =</span> q0061_0001, <span class="co"># Dep-4</span></span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ec3 =</span> q0062_0001, <span class="co"># EC-3</span></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_au1 =</span> q0063_0001, <span class="co"># AU-1</span></span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ga5 =</span> q0064_0001, <span class="co"># GA-6</span></span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_au2 =</span> q0065_0001, <span class="co"># AU-2</span></span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ga6 =</span> q0066_0001, <span class="co"># GA-7</span></span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_fa1 =</span> q0067_0001, <span class="co"># FA-1</span></span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_sa2 =</span> q0068_0001, <span class="co"># SA-2</span></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_fa2 =</span> q0069_0001, <span class="co"># FA-2</span></span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_de5 =</span> q0070_0001, <span class="co"># Dep-5</span></span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_sa3 =</span> q0071_0001, <span class="co"># SA-3</span></span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_fa3 =</span> q0072_0001, <span class="co"># FA-3</span></span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_sa4 =</span> q0073_0001, <span class="co"># SA-4</span></span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_de6 =</span> q0074_0001, <span class="co"># Dep-6</span></span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_sa5 =</span> q0075_0001, <span class="co"># SA-5</span></span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_au3 =</span> q0076_0001, <span class="co"># AU-3</span></span>
+<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ad2 =</span> q0077_0001, <span class="co"># Ac-Dis-2</span></span>
+<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_fa4 =</span> q0078_0001, <span class="co"># FA-4</span></span>
+<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ad3 =</span> q0079_0001, <span class="co"># Ac-Dis-3</span></span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_au4 =</span> q0080_0001, <span class="co"># AU-4</span></span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_fa5 =</span> q0081_0001, <span class="co"># FA-5</span></span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_ad4 =</span> q0082_0001, <span class="co"># Ac-Dis-4</span></span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a>               <span class="at">ccaps_fa6 =</span> q0083_0001, <span class="co"># FA-6</span></span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_name =</span> q0160_0001,</span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_company =</span> q0160_0002,</span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_address1 =</span> q0160_0003,</span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_address2 =</span> q0160_0004,</span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_city =</span> q0160_0005,</span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_state =</span> q0160_0006,</span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_zip =</span> q0160_0007,</span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_country =</span> q0160_0008,</span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_email =</span> q0160_0009,</span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>               <span class="at">int_phone =</span> q0160_0010,</span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_name =</span> q0161_0001,</span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_company =</span> q0161_0002,</span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_address1 =</span> q0161_0003,</span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_address2 =</span> q0161_0004,</span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_city =</span> q0161_0005,</span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_state =</span> q0161_0006,</span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_zip =</span> q0161_0007,</span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_country =</span> q0161_0008,</span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_email =</span> q0161_0009,</span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a>               <span class="at">intS_phone =</span> q0161_0010)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="recode-for-dichotomous-items" class="level3">
+<h3 class="anchored" data-anchor-id="recode-for-dichotomous-items">Recode for Dichotomous Items</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode for Dichotomous Items</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># eros_gd</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g1d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g1 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g2d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g2 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g3d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g3 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g4d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g4 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g5d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g5 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g6d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g6 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g7d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g7 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_g8d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_g8 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># eros_a</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a1d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a1 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a2d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a2 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a3d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a3 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a4d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a4 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a5d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a5 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a6d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a6 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a7d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a7 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>eros_a8d <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>eros_a8 <span class="sc">&gt;</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># # dass variables</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_d1d &lt;- ifelse(data$dass_d1 &gt; 0, 1, 0)</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_d2d &lt;- ifelse(data$dass_d2 &gt; 0, 1, 0)</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_d3d &lt;- ifelse(data$dass_d3 &gt; 0, 1, 0)</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_d4d &lt;- ifelse(data$dass_d4 &gt; 0, 1, 0)</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_d5d &lt;- ifelse(data$dass_d5 &gt; 0, 1, 0)</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_d6d &lt;- ifelse(data$dass_d6 &gt; 0, 1, 0)</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_d7d &lt;- ifelse(data$dass_d7 &gt; 0, 1, 0)</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co"># # Aniety</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_a1d &lt;- ifelse(data$dass_a1 &gt; 0, 1, 0)</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_a2d &lt;- ifelse(data$dass_a2 &gt; 0, 1, 0)</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_a3d &lt;- ifelse(data$dass_a3 &gt; 0, 1, 0)</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_a4d &lt;- ifelse(data$dass_a4 &gt; 0, 1, 0)</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_a5d &lt;- ifelse(data$dass_a5 &gt; 0, 1, 0)</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_a6d &lt;- ifelse(data$dass_a6 &gt; 0, 1, 0)</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_a7d &lt;- ifelse(data$dass_a7 &gt; 0, 1, 0)</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="co"># # Stress</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_s1d &lt;- ifelse(data$dass_s1 &gt; 0, 1, 0)</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_s2d &lt;- ifelse(data$dass_s2 &gt; 0, 1, 0)</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_s3d &lt;- ifelse(data$dass_s3 &gt; 0, 1, 0)</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_s4d &lt;- ifelse(data$dass_s4 &gt; 0, 1, 0)</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_s5d &lt;- ifelse(data$dass_s5 &gt; 0, 1, 0)</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_s6d &lt;- ifelse(data$dass_s6 &gt; 0, 1, 0)</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="co"># data$dass_s7d &lt;- ifelse(data$dass_s7 &gt; 0, 1, 0)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="create-demographic-table" class="level3">
+<h3 class="anchored" data-anchor-id="create-demographic-table">Create demographic table</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(gtsummary)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># # summarize the data with our package</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># table1 &lt;- </span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   data %&gt;%</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   tbl_summary(include = c(age, sexori, gender, race, education, employment, income, rel_affiliation, spouse_so))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="psychometrics" class="level1">
+<h1>Psychometrics</h1>
+<section id="sexual-attraction" class="level2">
+<h2 class="anchored" data-anchor-id="sexual-attraction">Sexual Attraction</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sexual Attraction</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a new dataframe</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eros_a1"</span>, <span class="st">"eros_a2"</span>, <span class="st">"eros_a3"</span>, <span class="st">"eros_a4"</span>, <span class="st">"eros_a5"</span>, <span class="st">"eros_a6"</span>, <span class="st">"eros_a7"</span>, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eros_g1"</span>, <span class="st">"eros_g2"</span>, <span class="st">"eros_g3"</span>, <span class="st">"eros_g4"</span>, <span class="st">"eros_g5"</span>, <span class="st">"eros_g6"</span>, <span class="st">"eros_g7"</span>, </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eros_a1d"</span>, <span class="st">"eros_a2d"</span>, <span class="st">"eros_a3d"</span>, <span class="st">"eros_a4d"</span>, <span class="st">"eros_a5d"</span>, <span class="st">"eros_a6d"</span>, <span class="st">"eros_a7d"</span>, </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eros_g1d"</span>, <span class="st">"eros_g2d"</span>, <span class="st">"eros_g3d"</span>, <span class="st">"eros_g4d"</span>, <span class="st">"eros_g5d"</span>, <span class="st">"eros_g6d"</span>, <span class="st">"eros_g7d"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">EROS_Ar=</span><span class="fu">c</span>(<span class="st">"eros_a1"</span>, <span class="st">"eros_a2"</span>, <span class="st">"eros_a3"</span>, <span class="st">"eros_a4"</span>, <span class="st">"eros_a5"</span>, <span class="st">"eros_a6"</span>, <span class="st">"eros_a7"</span>), </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">EROS_Gr=</span><span class="fu">c</span>(<span class="st">"eros_g1"</span>, <span class="st">"eros_g2"</span>, <span class="st">"eros_g3"</span>, <span class="st">"eros_g4"</span>, <span class="st">"eros_g5"</span>, <span class="st">"eros_g6"</span>, <span class="st">"eros_g7"</span>),</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">EROS_Ad=</span><span class="fu">c</span>(<span class="st">"eros_a1d"</span>, <span class="st">"eros_a2d"</span>, <span class="st">"eros_a3d"</span>, <span class="st">"eros_a4d"</span>, <span class="st">"eros_a5d"</span>, <span class="st">"eros_a6d"</span>, <span class="st">"eros_a7d"</span>),</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">EROS_Gd=</span><span class="fu">c</span>(<span class="st">"eros_g1d"</span>, <span class="st">"eros_g2d"</span>, <span class="st">"eros_g3d"</span>, <span class="st">"eros_g4d"</span>, <span class="st">"eros_g5d"</span>, <span class="st">"eros_g6d"</span>, <span class="st">"eros_g7d"</span>)))</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EROS_Ar <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EROS_Ar"</span>]</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EROS_Gr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EROS_Gr"</span>]</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EROS_Ad <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EROS_Ad"</span>]</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EROS_Gd <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EROS_Gd"</span>]</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>        EROS_Ar   EROS_Gr   EROS_Ad   EROS_Gd
+alpha 0.9181093 0.9237269 0.8462498 0.8127849</code></pre>
+</div>
+</div>
+</section>
+<section id="ccaps-34" class="level2">
+<h2 class="anchored" data-anchor-id="ccaps-34">CCAPS-34</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## CCAPS-34</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new dataframe</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ccaps_sa1"</span>, <span class="st">"ccaps_sa2"</span>, <span class="st">"ccaps_sa3"</span>,<span class="st">"ccaps_sa4"</span>,<span class="st">"ccaps_sa5"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ccaps_ga1"</span>, <span class="st">"ccaps_ga2"</span>, <span class="st">"ccaps_ga3"</span>, <span class="st">"ccaps_ga4"</span>, <span class="st">"ccaps_ga5"</span>, <span class="st">"ccaps_ga6"</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ccaps_ec1"</span>, <span class="st">"ccaps_ec2"</span>, <span class="st">"ccaps_ec3"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ccaps_de1"</span>, <span class="st">"ccaps_de2"</span>, <span class="st">"ccaps_de3"</span>, <span class="st">"ccaps_de4"</span>, <span class="st">"ccaps_de5"</span>, <span class="st">"ccaps_de6"</span>, </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ccaps_ad1"</span>, <span class="st">"ccaps_ad2"</span>,  <span class="st">"ccaps_ad3"</span>, <span class="st">"ccaps_ad4"</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ccaps_au1"</span>,  <span class="st">"ccaps_au2"</span>,<span class="st">"ccaps_au3"</span>,<span class="st">"ccaps_au4"</span>,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ccaps_fa1"</span>,  <span class="st">"ccaps_fa2"</span>, <span class="st">"ccaps_fa3"</span>, <span class="st">"ccaps_fa4"</span>, <span class="st">"ccaps_fa5"</span>, <span class="st">"ccaps_fa6"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    scales_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(scales_data, <span class="fu">list</span>(</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">CCAPS_SAr=</span><span class="fu">c</span>(<span class="st">"ccaps_sa1"</span>, <span class="st">"-ccaps_sa2"</span>, <span class="st">"ccaps_sa3"</span>, <span class="st">"ccaps_sa4"</span>,<span class="st">"ccaps_sa5"</span>), </span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">CCAPS_GAr=</span><span class="fu">c</span>(<span class="st">"ccaps_ga1"</span>, <span class="st">"ccaps_ga2"</span>, <span class="st">"ccaps_ga3"</span>, <span class="st">"ccaps_ga4"</span>, <span class="st">"ccaps_ga5"</span>, <span class="st">"ccaps_ga6"</span>),</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">CCAPS_ECr=</span><span class="fu">c</span>(<span class="st">"ccaps_ec1"</span>, <span class="st">"ccaps_ec3"</span>, <span class="st">"ccaps_ec2"</span>),</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">CCAPS_DEPr=</span><span class="fu">c</span>(<span class="st">"ccaps_de1"</span>, <span class="st">"ccaps_de2"</span>, <span class="st">"ccaps_de3"</span>, <span class="st">"ccaps_de4"</span>, <span class="st">"ccaps_de5"</span>, <span class="st">"ccaps_de6"</span>),</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">CCAPS_ADr=</span><span class="fu">c</span>(<span class="st">"-ccaps_ad1"</span>, <span class="st">"ccaps_ad4"</span>,<span class="st">"ccaps_ad2"</span>,<span class="st">"ccaps_ad3"</span>),</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">CCAPS_AUr=</span><span class="fu">c</span>(<span class="st">"ccaps_au1"</span>, <span class="st">"ccaps_au2"</span>,  <span class="st">"ccaps_au3"</span>, <span class="st">"ccaps_au4"</span>),</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">CCAPS_FAr=</span><span class="fu">c</span>(<span class="st">"ccaps_fa1"</span>,  <span class="st">"ccaps_fa2"</span>, <span class="st">"ccaps_fa3"</span>, <span class="st">"ccaps_fa4"</span>, <span class="st">"ccaps_fa5"</span>, <span class="st">"ccaps_fa6"</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>      ))</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys, scales_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>CCAPS_SAr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"CCAPS_SAr"</span>]</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>CCAPS_GAr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"CCAPS_GAr"</span>]</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>CCAPS_ECr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"CCAPS_ECr"</span>]</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>CCAPS_DEPr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"CCAPS_DEPr"</span>]</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>CCAPS_ADr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"CCAPS_ADr"</span>]</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>CCAPS_AUr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"CCAPS_AUr"</span>]</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>CCAPS_FAr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"CCAPS_FAr"</span>]</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>      CCAPS_SAr CCAPS_GAr CCAPS_ECr CCAPS_DEPr CCAPS_ADr CCAPS_AUr CCAPS_FAr
+alpha 0.7740736 0.8112391 0.9136351  0.9047516 0.7629402 0.8225038 0.8688519</code></pre>
+</div>
+</div>
+</section>
+<section id="durel" class="level2">
+<h2 class="anchored" data-anchor-id="durel">DUREL</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Relational Quality</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new dataframe</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"durel_ir1"</span>, <span class="st">"durel_ir2"</span>, <span class="st">"durel_ir3"</span>, <span class="st">"durel_ora1"</span>, <span class="st">"durel_nora1"</span>, <span class="st">"durel_nora2"</span>, <span class="st">"durel_nora3"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    scales_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(scales_data, <span class="fu">list</span>(</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">DUREL_IRr=</span><span class="fu">c</span>(<span class="st">"durel_ir1"</span>, <span class="st">"durel_ir2"</span>, <span class="st">"durel_ir3"</span>), </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">DUREL_NORAr=</span><span class="fu">c</span>(<span class="st">"durel_nora1"</span>, <span class="st">"durel_nora2"</span>, <span class="st">"durel_nora3"</span>),</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">DURELr=</span><span class="fu">c</span>(<span class="st">"durel_ir1"</span>, <span class="st">"durel_ir2"</span>, <span class="st">"durel_ir3"</span>, <span class="st">"durel_ora1"</span>, <span class="st">"durel_nora1"</span>, <span class="st">"durel_nora2"</span>, <span class="st">"durel_nora3"</span>)))</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,scales_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>DUREL_IRr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"DUREL_IRr"</span>]</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>DUREL_NORAr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"DUREL_NORAr"</span>]</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>DURELr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"DURELr"</span>]</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>      DUREL_IRr DUREL_NORAr    DURELr
+alpha 0.7796056    0.727446 0.8334698</code></pre>
+</div>
+</div>
+</section>
+<section id="attitudes-and-beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="attitudes-and-beliefs">Attitudes and Beliefs</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Attitudes and Beliefs</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new dataframe</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"att_c1"</span>, <span class="st">"att_c2"</span>, <span class="st">"att_c3"</span>, <span class="st">"att_c4"</span>, <span class="st">"att_b1"</span>, <span class="st">"att_b2"</span>, <span class="st">"att_b3"</span>, <span class="st">"att_b4"</span>, <span class="st">"att_b5"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(<span class="at">ATT_Cr=</span><span class="fu">c</span>(</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-att_c1"</span>, <span class="st">"att_c2"</span>, <span class="st">"-att_c3"</span>, <span class="st">"-att_c4"</span>), </span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ATT_Br=</span><span class="fu">c</span>(<span class="st">"att_b1"</span>, <span class="st">"att_b2"</span>, <span class="st">"att_b3"</span>, <span class="st">"att_b4"</span>, <span class="st">"att_b5"</span>)))</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>ATT_Cr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"ATT_Cr"</span>]</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>ATT_Br <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"ATT_Br"</span>]</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         ATT_Cr    ATT_Br
+alpha 0.7381901 0.6465962</code></pre>
+</div>
+</div>
+</section>
+<section id="relational-quality" class="level2">
+<h2 class="anchored" data-anchor-id="relational-quality">Relational Quality</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Relational Quality</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new dataframe</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ecr_avd1"</span>, <span class="st">"ecr_avd2"</span>, <span class="st">"ecr_avd3"</span>, <span class="st">"ecr_avd4"</span>, <span class="st">"ecr_avd5"</span>, <span class="st">"ecr_avd6"</span>, <span class="st">"ecr_anx1"</span>, <span class="st">"ecr_anx2"</span>, <span class="st">"ecr_anx3"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    scales_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(scales_data, <span class="fu">list</span>(</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">ECR_ANXm=</span><span class="fu">c</span>(<span class="st">"-ecr_avd1"</span>, <span class="st">"-ecr_avd2"</span>, <span class="st">"-ecr_avd3"</span>, <span class="st">"-ecr_avd4"</span>, <span class="st">"ecr_avd5"</span>, <span class="st">"ecr_avd6"</span>), </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">ECR_AVDm=</span><span class="fu">c</span>(<span class="st">"ecr_anx1"</span>, <span class="st">"ecr_anx2"</span>, <span class="st">"ecr_anx3"</span>)))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys, scales_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>ECR_ANXm <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"ECR_ANXm"</span>]</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>ECR_AVDm <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"ECR_AVDm"</span>]</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>       ECR_ANXm  ECR_AVDm
+alpha 0.8875644 0.8553559</code></pre>
+</div>
+</div>
+</section>
+<section id="psychological-well-being" class="level2">
+<h2 class="anchored" data-anchor-id="psychological-well-being">Psychological Well-being</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## PSYCHOLOGICAL WELL-BEING</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new dataframe</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pwb_g1"</span>, <span class="st">"pwb_g2"</span>, <span class="st">"pwb_g4"</span>, <span class="st">"pwb_g6"</span>, <span class="st">"pwb_g8"</span>, <span class="st">"pwb_g9"</span>, </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"pwb_g3"</span>, <span class="st">"pwb_g5"</span>, <span class="st">"pwb_g7"</span>, </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"pwb_p1"</span>, <span class="st">"pwb_p2"</span>, <span class="st">"pwb_p3"</span>, <span class="st">"pwb_p4"</span>, <span class="st">"pwb_p5"</span>, <span class="st">"pwb_p9"</span>, <span class="st">"pwb_p6"</span>, <span class="st">"pwb_p7"</span>, <span class="st">"pwb_p8"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"pwb_a3"</span>, <span class="st">"pwb_a6"</span>, <span class="st">"pwb_a7"</span>, <span class="st">"pwb_a1"</span>, <span class="st">"pwb_a2"</span>, <span class="st">"pwb_a4"</span>, <span class="st">"pwb_a5"</span>, <span class="st">"pwb_a8"</span>, <span class="st">"pwb_a9"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">PWB_Gr=</span><span class="fu">c</span>(</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"-pwb_g1"</span>, <span class="st">"-pwb_g2"</span>, <span class="st">"-pwb_g4"</span>, <span class="st">"-pwb_g6"</span>, <span class="st">"-pwb_g8"</span>, <span class="st">"-pwb_g9"</span>, <span class="co"># reverse scored</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"pwb_g3"</span>, <span class="st">"pwb_g5"</span>, <span class="st">"pwb_g7"</span>),</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">PWB_Pr=</span><span class="fu">c</span>(</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"-pwb_p1"</span>, <span class="st">"-pwb_p2"</span>, <span class="st">"-pwb_p3"</span>, <span class="st">"-pwb_p4"</span>, <span class="st">"-pwb_p5"</span>, <span class="st">"-pwb_p9"</span>, <span class="co"># reverse scored</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"pwb_p6"</span>, <span class="st">"pwb_p7"</span>, <span class="st">"pwb_p8"</span>),</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">PWB_Ar=</span><span class="fu">c</span>(</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"-pwb_a3"</span>, <span class="st">"-pwb_a6"</span>, <span class="st">"-pwb_a7"</span>, <span class="co"># reverse scored</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"pwb_a1"</span>, <span class="st">"pwb_a2"</span>, <span class="st">"pwb_a4"</span>, <span class="st">"pwb_a5"</span>, <span class="st">"pwb_a8"</span>, <span class="st">"pwb_a9"</span>))) </span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PWB_Gr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PWB_Gr"</span>]</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PWB_Pr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PWB_Pr"</span>]</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PWB_Ar <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PWB_Ar"</span>]</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         PWB_Gr    PWB_Pr    PWB_Ar
+alpha 0.8120904 0.8724642 0.9168447</code></pre>
+</div>
+</div>
+</section>
+<section id="depression-anxiety-stress-scale" class="level2">
+<h2 class="anchored" data-anchor-id="depression-anxiety-stress-scale">Depression, Anxiety, Stress Scale</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">##DASS</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new dataframe</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"dass_d1"</span>, <span class="st">"dass_d2"</span>, <span class="st">"dass_d3"</span>, <span class="st">"dass_d4"</span>, <span class="st">"dass_d5"</span>, <span class="st">"dass_d6"</span>, <span class="st">"dass_d7"</span>, <span class="st">"dass_a1"</span>, <span class="st">"dass_a2"</span>, <span class="st">"dass_a3"</span>, <span class="st">"dass_a4"</span>, <span class="st">"dass_a5"</span>, <span class="st">"dass_a6"</span>, <span class="st">"dass_a7"</span>, <span class="st">"dass_s1"</span>, <span class="st">"dass_s2"</span>, <span class="st">"dass_s3"</span>, <span class="st">"dass_s4"</span>, <span class="st">"dass_s5"</span>, <span class="st">"dass_s6"</span>, <span class="st">"dass_s7"</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">DASS_Dr=</span><span class="fu">c</span>(<span class="st">"dass_d1"</span>, <span class="st">"dass_d2"</span>, <span class="st">"dass_d3"</span>, <span class="st">"dass_d4"</span>, <span class="st">"dass_d5"</span>, <span class="st">"dass_d6"</span>, <span class="st">"dass_d7"</span>),</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">DASS_Ar=</span><span class="fu">c</span>(<span class="st">"dass_a1"</span>, <span class="st">"dass_a2"</span>, <span class="st">"dass_a3"</span>, <span class="st">"dass_a4"</span>, <span class="st">"dass_a5"</span>, <span class="st">"dass_a6"</span>, <span class="st">"dass_a7"</span>),</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">DASS_Sr=</span><span class="fu">c</span>(<span class="st">"dass_s1"</span>, <span class="st">"dass_s2"</span>, <span class="st">"dass_s3"</span>, <span class="st">"dass_s4"</span>, <span class="st">"dass_s5"</span>, <span class="st">"dass_s6"</span>, <span class="st">"dass_s7"</span>)))</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>DASS_Dr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"DASS_Dr"</span>]</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>DASS_Ar <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"DASS_Ar"</span>]</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>DASS_Sr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"DASS_Sr"</span>]</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>        DASS_Dr   DASS_Ar   DASS_Sr
+alpha 0.9403308 0.8581855 0.8473038</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # DUREL</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data$durel &lt;- rowSums(data[, 163:172])</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># # Relational</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># data$relational &lt;- rowSums(data[, 173:181])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="social-support" class="level2">
+<h2 class="anchored" data-anchor-id="social-support">Social Support</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Social Support</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new dataframe</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"support_g1"</span>, <span class="st">"support_g2"</span>, <span class="st">"support_g3"</span>, <span class="st">"support_g4"</span>, <span class="st">"support_s1"</span>, <span class="st">"support_s2"</span>, <span class="st">"support_s3"</span>, <span class="st">"support_s4"</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(<span class="at">SUPPORT_Gr=</span><span class="fu">c</span>(</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"support_g1"</span>, <span class="st">"support_g2"</span>, <span class="st">"support_g3"</span>, <span class="st">"support_g4"</span>),</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">SUPPORT_Sr=</span><span class="fu">c</span>(<span class="st">"support_s1"</span>, <span class="st">"support_s2"</span>, <span class="st">"support_s3"</span>, <span class="st">"support_s4"</span>)))</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>SUPPORT_Gr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"SUPPORT_Gr"</span>]</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>SUPPORT_Sr <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"SUPPORT_Sr"</span>]</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>      SUPPORT_Gr SUPPORT_Sr
+alpha  0.7658405  0.6827635</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CREATING NEW VARIABLES</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># CREATE SSA &amp; OSA</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSAr <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>gender <span class="sc">==</span> <span class="dv">1</span>, data<span class="sc">$</span>EROS_Ar, data<span class="sc">$</span>EROS_Gr)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>OSAr <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>gender <span class="sc">==</span> <span class="dv">1</span>, data<span class="sc">$</span>EROS_Gr, data<span class="sc">$</span>EROS_Ar)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSAd <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>gender <span class="sc">==</span> <span class="dv">1</span>, data<span class="sc">$</span>EROS_Ad, data<span class="sc">$</span>EROS_Gd)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>OSAd <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data<span class="sc">$</span>gender <span class="sc">==</span> <span class="dv">1</span>, data<span class="sc">$</span>EROS_Gd, data<span class="sc">$</span>EROS_Ad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="remove-participants" class="level3">
+<h3 class="anchored" data-anchor-id="remove-participants">Remove Participants</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove anyone that completed survey in less than 5 min.</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data &lt;- data[data$Duration &gt; 5, ]</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove Mischievous Responders</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>RpID <span class="sc">!=</span> <span class="dv">16</span>, ] <span class="co"># RpID016 said "Purple-Eater"</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Individual Changes</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>data[data<span class="sc">$</span>RpID <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"marriage_year"</span>] <span class="ot">&lt;-</span> <span class="st">"2018"</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>data[data<span class="sc">$</span>RpID <span class="sc">==</span> <span class="dv">12</span>, <span class="st">"marriage_year"</span>] <span class="ot">&lt;-</span> <span class="st">"2016"</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>marriage_year <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data<span class="sc">$</span>marriage_year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # Assocations</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># #First indicate which columns do you want in your correlation table</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># cor_cols = c('OSAr','DASS_Dr','DASS_Sr',</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">#               'DASS_Ar', "PWB_Pr", "PWB_Gr", "PWB_Ar")</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># hetero_data &lt;- subset(data, select = cor_cols)</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># #Slice the data and calculate correlation table:</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mt = as.matrix(hetero_data[,cor_cols])</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co"># library(Hmisc)</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co"># myrcorr &lt;- rcorr(mt, type="spearman")</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co"># #format numbers</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="co"># cor_table &lt;-as.matrix( round(myrcorr$r,2))</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="co"># #remove rownames and colnames</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="co"># colnames(cor_table)&lt;- rownames(cor_table)&lt;- NULL</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="co"># #remove leading zeros and add stars</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="co"># n &lt;- length(cor_cols)</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="co"># for (c in 1:n) {</span></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="co">#   for (r in 1:n) {</span></span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a><span class="co">#       pval &lt;- myrcorr$P[r,c]</span></span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a><span class="co">#       stars &lt;- ifelse(pval &lt; .001, "***", ifelse(pval &lt; .01, "** ", ifelse(pval &lt; .05, "*  ", "   ")))</span></span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a><span class="co">#       coeff = sub("0*\\.",".",cor_table[r,c]) #remove leading zeros</span></span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a><span class="co">#       cor_table[r,c] = paste(c(coeff,stars),collapse='')</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="co">#   }</span></span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a><span class="co"># cor_table[upper.tri(cor_table)] &lt;- '' # erase the upper triangle</span></span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a><span class="co"># diag(cor_table) &lt;- '-' # replace the diagonals by dash(-)</span></span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a><span class="co"># cora_table &lt;- nice_table(</span></span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a><span class="co">#   cor_table,</span></span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a><span class="co">#   title = c("Table 1", "Motor Trend Car Road Tests"),</span></span>
+<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a><span class="co">#   note = c(</span></span>
+<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a><span class="co">#     "The data was extracted from the 1974 Motor Trend US magazine.",</span></span>
+<span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a><span class="co">#     "* p &lt; .05, ** p &lt; .01, *** p &lt; .001"</span></span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a><span class="co">#   )</span></span>
+<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a><span class="co"># mypath &lt;- "/Users/seungjukim/Library/CloudStorage/GoogleDrive-follhim@gmail.com/My Drive/R Studio Workflow/Mixed Orientation Marriage/cor_table-test.docx"</span></span>
+<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a><span class="co"># flextable::save_as_docx(cora_table, path = mypath)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(apaTables)</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># cor_cols = c('OSAr', "SSAr", "spirituality", "religiosity", "ECR_AVDm", "ECR_ANXm", 'DASS_Dr','DASS_Sr',</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co">#               'DASS_Ar', "PWB_Pr", "PWB_Gr", "PWB_Ar")</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># #Slice the data and calculate correlation table:</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co"># mt = as.matrix(lgb_data[,cor_cols])</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># apaTables::apa.cor.table(mt, filename = "cor_table.doc")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="median-imputation-of-missing-responses" class="level2">
+<h2 class="anchored" data-anchor-id="median-imputation-of-missing-responses">Median Imputation of Missing Responses</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove Trans people</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>gender <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),]</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># DF for just LGB and Heterosexuals</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>hetero_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>sex_att <span class="sc">==</span> <span class="dv">1</span>,]</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>lgb_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>sex_att <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>),]</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Median Imputation</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create separate data based on sexual orientation</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>lgb_data <span class="ot">&lt;-</span> lgb_data <span class="sc">%&gt;%</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">replace_na</span>(., <span class="fu">median</span>(., <span class="at">na.rm=</span><span class="cn">TRUE</span>))))</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>hetero_data <span class="ot">&lt;-</span> hetero_data <span class="sc">%&gt;%</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">replace_na</span>(., <span class="fu">median</span>(., <span class="at">na.rm=</span><span class="cn">TRUE</span>))))</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="co"># First, remove the rows in main_data that are also in subset_data</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">anti_join</span>(data, lgb_data, <span class="at">by =</span> <span class="st">"RpID"</span>)</span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, bind the rows from subset_data to the updated main_data</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(data, lgb_data)</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a><span class="co"># First, remove the rows in main_data that are also in subset_data</span></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">anti_join</span>(data, hetero_data, <span class="at">by =</span> <span class="st">"RpID"</span>)</span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, bind the rows from subset_data to the updated main_data</span></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(data, hetero_data)</span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>hetero_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>sex_att <span class="sc">==</span> <span class="dv">1</span>,]</span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a>lgb_data <span class="ot">&lt;-</span> data[data<span class="sc">$</span>sex_att <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Subset</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ssa_data &lt;- subset(data, (sexori == 2 | sexori == 3 | sexori == 4) &amp; (gender == 1 | gender == 2))</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co"># osa_data &lt;- subset(data, (sexori == 1) &amp; (gender == 1 | gender == 2))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # SSA</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># library(apaTables)</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># selected_vars &lt;- c("ssa", "osa", "dass_dep", "dass_anx", "dass_str", "pwb_gro", "pwb_pur", "pwb_acc", "durel", "relational")</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ssa.cor.data &lt;- subset(ssa_data, select = selected_vars)</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co"># apa.cor.table(ssa.cor.data, filename = "time-clean.ssa.cor.table.doc")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming your dataframe is named data</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data[] &lt;- lapply(data, function(x) if(is.character(x)) as.numeric(x) else x)</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># write.csv(data, file = "mom-2018.csv", row.names = FALSE)</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(data, <span class="st">"mom_2018.sav"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For reference</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># missing_proportions_per_column &lt;- apply(ssa_data, 2, function(x) sum(is.na(x)) / length(x))</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># max_missing_proportions &lt;- max(missing_proportions_per_column)</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># variables_with_most_missing &lt;- names(missing_proportions_per_column[missing_proportions_per_column == max_missing_proportions])</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print(variables_with_most_missing)</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># sorted_missing_proportions &lt;- sort(missing_proportions_per_column, decreasing = TRUE)</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print(sorted_missing_proportions)</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="co"># which(names(ssa_data) == "my_variable")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
